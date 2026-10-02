@@ -1,0 +1,19 @@
+$ ./mvnw -B compile
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.academia:cuenta-bancaria-maven >-----------------
+[INFO] Building cuenta-bancaria-maven 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ cuenta-bancaria-maven ---
+[INFO] skip non existing resourceDirectory /home/alanc/cuenta-bancaria-maven/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ cuenta-bancaria-maven ---
+[INFO] No sources to compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.069 s
+[INFO] Finished at: 2026-10-02T13:42:00-06:00
+[INFO] ------------------------------------------------------------------------
