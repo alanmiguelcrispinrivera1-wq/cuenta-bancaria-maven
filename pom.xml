@@ -14,6 +14,9 @@
         <maven.compiler.release>17</maven.compiler.release>
         <!-- Los archivos están en UTF-8 (acentos) -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Las versiones, en un solo lugar -->
+        <jackson.version>2.22.3</jackson.version>
+        <junit.version>5.14.4</junit.version>
     </properties>
 
     <dependencies>
@@ -21,25 +24,25 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.14.4</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-                <!-- Jackson: convierte objetos de Java a JSON (y de regreso) -->
+        <!-- Jackson: convierte objetos de Java a JSON (y de regreso) -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.22.3</version>
+            <version>${jackson.version}</version>
         </dependency>
     </dependencies>
-    
-  <build>
+
+    <build>
         <plugins>
-            <!-- Quien arma el .jar; aquí le decimos cuál es la clase con main -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.14.0</version>
             </plugin>
+            <!-- Quien arma el .jar; aquí le decimos cuál es la clase con main -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
