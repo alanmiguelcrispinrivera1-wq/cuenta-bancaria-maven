@@ -1,0 +1,8 @@
+Estado de cuenta de Ana López
+  DEPOSITO      2000.00
+  RETIRO         100.00
+  RETIRO         100.00
+  RETIRO         100.00
+  RETIRO         100.00
+  COMISION        10.00
+  Saldo:     1590.00
