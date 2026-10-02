@@ -1,0 +1,3 @@
+src/test/java/com/academia/banco/ComisionTest.java:3: error: package org.junit.jupiter.api does not exist
+import static org.junit.jupiter.api.Assertions.assertEquals;
+                                   ^

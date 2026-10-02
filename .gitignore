@@ -1,0 +1,6 @@
+target/
+salida/
+.pom-bueno.xml
+.vscode/
+.idea/
+*.iml
