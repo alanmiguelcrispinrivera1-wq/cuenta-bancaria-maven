@@ -1,0 +1,27 @@
+$ ./mvnw -B dependency:tree
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.academia:cuenta-bancaria-maven >-----------------
+[INFO] Building cuenta-bancaria-maven 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.7.0:tree (default-cli) @ cuenta-bancaria-maven ---
+[INFO] com.academia:cuenta-bancaria-maven:jar:1.0.0
+[INFO] +- org.junit.jupiter:junit-jupiter:jar:5.14.4:test
+[INFO] |  +- org.junit.jupiter:junit-jupiter-api:jar:5.14.4:test
+[INFO] |  |  +- org.opentest4j:opentest4j:jar:1.3.0:test
+[INFO] |  |  +- org.junit.platform:junit-platform-commons:jar:1.14.4:test
+[INFO] |  |  \- org.apiguardian:apiguardian-api:jar:1.1.2:test
+[INFO] |  +- org.junit.jupiter:junit-jupiter-params:jar:5.14.4:test
+[INFO] |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.14.4:test
+[INFO] |     \- org.junit.platform:junit-platform-engine:jar:1.14.4:test
+[INFO] \- com.fasterxml.jackson.core:jackson-databind:jar:2.22.3:compile
+[INFO]    +- com.fasterxml.jackson.core:jackson-annotations:jar:2.22:compile
+[INFO]    \- com.fasterxml.jackson.core:jackson-core:jar:2.22.3:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.886 s
+[INFO] Finished at: 2026-10-02T16:49:01-06:00
+[INFO] ------------------------------------------------------------------------

@@ -15,7 +15,7 @@
         <!-- Los archivos están en UTF-8 (acentos) -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    
+
     <dependencies>
         <!-- JUnit 5, solo para las pruebas (scope test) -->
         <dependency>
@@ -24,11 +24,22 @@
             <version>5.14.4</version>
             <scope>test</scope>
         </dependency>
+                <!-- Jackson: convierte objetos de Java a JSON (y de regreso) -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.22.3</version>
+        </dependency>
     </dependencies>
     
-    <build>
+  <build>
         <plugins>
             <!-- Quien arma el .jar; aquí le decimos cuál es la clase con main -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.14.0</version>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -39,6 +50,24 @@
                             <mainClass>com.academia.banco.App</mainClass>
                         </manifest>
                     </archive>
+                </configuration>
+            </plugin>
+            <!-- Arma un segundo .jar «gordo»: tu código + el de todas tus dependencias -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.6.2</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <!-- Sin esto, deja un «dependency-reduced-pom.xml» junto a tu pom -->
+                    <createDependencyReducedPom>false</createDependencyReducedPom>
                 </configuration>
             </plugin>
         </plugins>

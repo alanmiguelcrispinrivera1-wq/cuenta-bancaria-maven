@@ -1,0 +1,32 @@
+Estado de cuenta de Ana López
+  DEPOSITO      2000.00
+  RETIRO         100.00
+  RETIRO         100.00
+  RETIRO         100.00
+  RETIRO         100.00
+  COMISION        10.00
+  Saldo:     1590.00
+
+{
+  "titular" : "Ana López",
+  "saldo" : 1590.00,
+  "movimientos" : [ {
+    "tipo" : "DEPOSITO",
+    "monto" : 2000.00
+  }, {
+    "tipo" : "RETIRO",
+    "monto" : 100.00
+  }, {
+    "tipo" : "RETIRO",
+    "monto" : 100.00
+  }, {
+    "tipo" : "RETIRO",
+    "monto" : 100.00
+  }, {
+    "tipo" : "RETIRO",
+    "monto" : 100.00
+  }, {
+    "tipo" : "COMISION",
+    "monto" : 10.00
+  } ]
+}
