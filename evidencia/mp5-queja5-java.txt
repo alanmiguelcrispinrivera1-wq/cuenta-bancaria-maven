@@ -1,0 +1,2 @@
+Error: Could not find or load main class com.academia.banco.Aplicacion
+Caused by: java.lang.ClassNotFoundException: com.academia.banco.Aplicacion

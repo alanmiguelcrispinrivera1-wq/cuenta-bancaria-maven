@@ -1,0 +1,24 @@
+$ ./mvnw -B clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.academia:cuenta-bancaria-maven >-----------------
+[INFO] Building cuenta-bancaria-maven 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for com.fasterxml.jackson.core:jackson-databind:jar:2.22.30 is missing, no dependency information available
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.476 s
+[INFO] Finished at: 2026-10-02T18:42:54-06:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project cuenta-bancaria-maven: Could not resolve dependencies for project com.academia:cuenta-bancaria-maven:jar:1.0.0
+[ERROR] dependency: com.fasterxml.jackson.core:jackson-databind:jar:2.22.30 (compile)
+[ERROR] 	com.fasterxml.jackson.core:jackson-databind:jar:2.22.30 was not found in https://repo.maven.apache.org/maven2 during a previous attempt. This failure was cached in the local repository and resolution is not reattempted until the update interval of central has elapsed or updates are forced
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
