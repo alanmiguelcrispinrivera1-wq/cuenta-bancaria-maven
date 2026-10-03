@@ -2,8 +2,8 @@
 
 | Queja | La línea clave que dijo Maven | La causa | Cómo lo arreglé |
 |---|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
+| 1 | `Non-parseable POM ... end tag name </dependencia> must match start tag name <dependency> from line 31` | Error de XML en el `pom.xml`: la etiqueta de apertura es `<dependency>` pero se cerró con `</dependencia>` (en español). Maven no puede leer el POM si las etiquetas no coinciden. | Cambié `</dependencia>` por `</dependency>` en la línea 35 para que la etiqueta de cierre coincida con la de apertura. |
+| 2 | `Fatal error compiling: error: release version 21 not supported` | El `pom.xml` tenía `maven.compiler.release` en 21, pero el JDK instalado es más antiguo (17) y no puede compilar para esa versión. | Cambié `maven.compiler.release` de 21 a 17 en `<properties>` para que coincida con el JDK instalado. |
+| 3 | `jackson-databind:jar:2.22.30 was not found in https://repo.maven.apache.org/maven2` | La versión de Jackson estaba mal escrita (`2.22.30`). | Corregí la versión a `2.22.3`. |
+| 4 | `EstadoDeCuenta.java:[6,34] package com.fasterxml.jackson.core does not exist` | La dependencia `jackson-databind` tenía `<scope>test</scope>`, por lo que solo estaba disponible para las pruebas y no para el código de `src/main/java`, donde está `EstadoDeCuenta.java`. | Eliminé `<scope>test</scope>` de la dependencia `jackson-databind` para que quede en el scope por defecto (`compile`). |
+| 5 | `Error: Could not find or load main class com.academia.banco.Aplicacion` (`ClassNotFoundException`) | El `maven-jar-plugin` tenía un `mainClass` incorrecto (`com.academia.banco.Aplicacion`), una clase que no existe. El build terminaba en `BUILD SUCCESS` porque Maven no valida ese valor, pero el `.jar` no podía arrancar. | Cambié `mainClass` a `com.academia.banco.App`, que es la clase real con el método `main`. |
