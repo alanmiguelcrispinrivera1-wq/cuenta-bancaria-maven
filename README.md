@@ -2,6 +2,8 @@
 
 **Autor:** Alan Miguel Crispin Rivera
 
+**NOTA:** En este repositorio se encuentran las respuestas del capitulo 3 y 4 del libro OCP Oracle Certified Professional Java SE 17 Developer Study Guide en la carpeta llamada `OCP_Q&A`
+
 Proyecto Java 17 gestionado con Maven. Modela una cuenta bancaria (depósitos, retiros con comisión) e imprime el estado de cuenta en texto y en JSON usando Jackson.
 
 ## Cómo construir y correr
